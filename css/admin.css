@@ -1,0 +1,610 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    box-sizing: border-box;
+    width: 20%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #fcf3e7;
+    margin: 0;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(50, 161, 213);
+}
+
+.nav-header a {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-header img {
+    width: 115px;
+}
+
+.nav-header p {
+    font-size: 23px;
+    font-weight: 650;
+    text-align: center;
+    margin: 8px auto 20px;
+}
+
+.nav-content,
+.nav-footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.nav-footer {
+    position: absolute;
+    bottom: 20px;
+}
+
+.nav-content li,
+.nav-footer li {
+    margin: 10px 0;
+    padding: 8px 15px;
+    border-bottom: 2px solid #aaaaaa;
+}
+
+.nav-content a,
+.nav-footer a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 550;
+    color: #646262;
+}
+
+.nav-content li:hover,
+.nav-footer li:hover {
+    background-color: #c7c3c3;
+}
+
+.nav-content li:hover a,
+.nav-footer li:hover a {
+    color: rgb(255, 255, 255);
+}
+
+main {
+    float: right;
+    width: 78%;
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        width: 30%;
+    }
+
+    main {
+        width: 68%;
+    }
+}
+
+/* layout chung*/
+
+.movie-management {
+    margin: 50px 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .movie-management .content {
+        overflow-x: scroll;
+    }
+}
+
+.movie-management .header {
+    background: rgb(244, 173, 236);
+    background: linear-gradient(
+        151deg,
+        rgba(244, 173, 236, 1) 0%,
+        rgba(243, 197, 86, 1) 100%
+    );
+    width: fit-content;
+    margin: 30px 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.movie-management .header img {
+    width: 35px;
+}
+
+.movie-management .header span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.movie-management .content {
+    background: rgba(244, 173, 236, 0.489);
+    background: linear-gradient(
+        151deg,
+        rgba(244, 173, 236, 0.489) 0%,
+        rgba(243, 197, 86, 0.489) 100%
+    );
+    width: 98%;
+    margin: auto;
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.movie-management .btn-add-movie {
+    border: 1px solid #99c2ff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #99c2ff;
+    color: white;
+    font-weight: 550;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.movie-management button a {
+    width: 100%;
+    height: 100%;
+}
+
+.movie-management .btn-add-movie:active {
+    border: 1px solid white;
+    color: #f3f0f0;
+}
+
+.movie-management table {
+    vertical-align: middle;
+    margin: 30px auto;
+    box-shadow: 8px 8px 14px #0000007a;
+}
+
+.movie-management th,
+.movie-management td {
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.movie-management table td img {
+    max-width: 135px;
+}
+
+.movie-management table td a {
+    width: fit-content;
+    height: fit-content;
+}
+
+.movie-management table button {
+    border-radius: 50%;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-management table .btn-detail {
+    border-radius: 15px;
+    border: 1px solid #0097ff;
+    background-color: #0097ff;
+    color: rgb(228, 228, 228);
+    font-weight: 650;
+}
+
+.movie-management table .btn-edit {
+    border: 1px solid aqua;
+    background-color: aqua;
+}
+
+.movie-management table .btn-delete {
+    border: 1px solid rgb(246, 59, 59);
+    background-color: rgb(246, 59, 59);
+}
+
+.movie-management table .btn-date {
+    border: 1px solid rgb(242 181 39 / 64%);
+    background-color: rgb(242 181 39 / 64%);
+}
+
+.movie-management table button:active {
+    border: 1px solid white;
+}
+
+/* quan ly phim */
+
+.content-add h1 {
+    font-size: 22px;
+    font-weight: 750;
+    text-align: center;
+}
+
+.content form {
+    width: 60%;
+    margin: 35px auto;
+}
+
+.content .footer {
+    width: 60%;
+    min-width: 550px;
+    margin: auto;
+}
+
+.content .form-control,
+label,
+select {
+    font-size: 17px;
+    font-weight: 550;
+    color: #605f5f;
+}
+
+.content option {
+    font-size: 16px;
+    font-weight: 600;
+    color: #605f5f;
+}
+
+.content .footer button,
+.content .footer a {
+    width: 230px;
+}
+
+/* them phim */
+.onclose-alert {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.156);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 15;
+}
+
+.info-alert {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    align-items: center;
+    position: fixed;
+    left: 40%;
+    z-index: 20;
+    animation-name: infoArlet;
+    animation-duration: 1400ms;
+    animation-fill-mode: forwards;
+}
+
+.info-alert p {
+    margin: 0;
+    margin-left: 10px;
+    color: rgb(90, 89, 89);
+    font-size: 20px;
+    font-weight: 650;
+}
+
+@keyframes infoArlet {
+    0% {
+        top: 150px;
+    }
+    100% {
+        top: 320px;
+    }
+}
+
+/* quan ly user */
+:root {
+    --success-color: rgb(68, 183, 0);
+    --error-color: rgb(218, 34, 34);
+}
+
+.icon-status {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.icon-status-success {
+    background-color: var(--success-color);
+}
+
+.icon-status-error {
+    background-color: var(--error-color);
+}
+
+.icon-status-success::after {
+    border: 1px solid var(--success-color);
+}
+
+.icon-status-error::after {
+    border: 1px solid var(--error-color);
+}
+
+.icon-status::after {
+    position: absolute;
+    top: -0.5px;
+    left: -0.5px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation-name: iconStatus;
+    animation-duration: 1400ms;
+    animation-iteration-count: infinite;
+    content: '';
+}
+
+@keyframes iconStatus {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(2, 2);
+        opacity: 0;
+    }
+}
+
+.onclose-modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.156);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 15;
+}
+
+.modal-user {
+    width: 550px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 30px 40px;
+    align-items: center;
+    position: fixed;
+    left: 40%;
+    z-index: 20;
+    animation-name: editUser;
+    animation-duration: 1400ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes editUser {
+    0% {
+        top: 20px;
+    }
+    100% {
+        top: 100px;
+    }
+}
+
+.btn-close {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+}
+
+.modal-user .modal-info {
+    margin-top: 25px;
+}
+
+.modal-user .info,
+.modal-user .update {
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    padding: 8px 14px;
+    margin: 10px auto;
+}
+
+.modal-user .info .title {
+    font-size: 17px;
+}
+
+.modal-user .info .title span,
+.modal-user label {
+    font-size: 16px;
+    font-weight: 650;
+    color: #605f5f;
+}
+
+.modal-user option {
+    font-size: 15px;
+    font-weight: 650;
+    color: #605f5f;
+}
+
+.modal-user select {
+    font-size: 17px;
+    font-weight: 650;
+    color: rgb(48, 47, 47);
+}
+
+.modal-end {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.modal-user .modal-end button {
+    width: 150px;
+}
+
+/* quan ly lịch chieu */
+.movie-management .info-movie {
+    width: 85%;
+    margin: 45px auto;
+    border: 2px solid #aaaaaa;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.549);
+}
+
+.movie-management .info-movie .info-header {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.movie-management .info-content {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.movie-management .info-movie .img {
+    width: 40%;
+    height: fit-content;
+    padding: 10px;
+    background-color: rgba(234, 183, 117, 0.449);
+    border-radius: 10px;
+}
+
+.movie-management .info-movie img {
+    width: 100%;
+}
+
+.movie-management .info {
+    width: 55%;
+    padding: 10px 13px;
+}
+
+.movie-management .info .group-text {
+    display: flex;
+    align-items: center;
+}
+
+.movie-management .info .group-text p {
+    font-size: 17px;
+    font-weight: 650;
+    color: #747474;
+    margin: 0;
+}
+
+.movie-management .info .group-text span {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 650;
+    color: #2d2c2c;
+}
+
+.movie-management .info .group-text .name-movie {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.movie-management .title-manage-showtime{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.movie-management .btn-return-movie {
+    background-color: #6b7175;
+    color: white;
+    padding: 10px 15px;
+    border: 1px solid #6b7175;
+    border-radius: 10px;
+}
+
+.movie-management .btn-return-movie:active {
+    border: 1px solid white;
+}
+
+/* Quản lý đơn vé */
+.offcanvas-order-detail {
+    width: fit-content !important;
+}
+.offcanvas-order .info-content {
+    margin: 10px 20px;
+    padding: 8px 12px;
+    border: 1.5px solid #aaaaaa;
+    border-radius: 10px;
+    color: #606060;
+}
+
+.offcanvas-order .info-content .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.offcanvas-order .info-content .label {
+    font-size: 18px;
+    font-weight: 650;
+    color: black;
+}
+
+.offcanvas-order .info-content .text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.offcanvas-order .ticket-content {
+    max-height: 450px;
+    overflow-x: auto;
+}
+
+.offcanvas-order .ticket-content .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.offcanvas-order .ticket-content .ticket-box {
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.offcanvas-order .ticket-content .ticket-col {
+    height: 70px;
+    width: 110px;
+    padding: 12px 0;
+    margin: 0 1px;
+    background-color: #FCF3E7;
+}
+
+.offcanvas-order .ticket-content .ticket-box:hover .ticket-col {
+    background-color: #FFFCF7;
+}
+
+.offcanvas-order .ticket-content p {
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+
+.offcanvas-order .ticket-content .label {
+    font-size: 17px;
+    font-weight: 650;
+    color: black;
+}
+
+.offcanvas-order .ticket-content .text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #606060;
+}
